@@ -1,32 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
 
 <head>
    <meta charset="utf-8">
-   <title>Simple template</title>
+   <title>Emscripten:Export1</title>
 </head>
 
 <body>
-   <p>Title</p>
-   <button onclick="myFunction()">Run myFunction</button>
    <script>
-      function loadWebAssembly(filename, imports = {}) {
-         return fetch(filename)
-            .then(response => response.arrayBuffer())
-            .then(bytes => WebAssembly.instantiate(bytes, imports))
-            .then(result => result.instance);
-      }
-      async function myFunction() {
-         let val = await loadWebAssembly('main.wasm')
-         .then(instance => {
-            const Sum = instance.exports.Sum;
-            console.log(Sum(2, 3));
-            console.log(Sum(1000, 23));
-            return Sum(1, 1);
-         })
-         document.write(val);
+      Module = {};
+      Module.onRuntimeInitialized = function () {
+         console.log(Module._show_me_the_answer_c());
+         console.log(Module._add_c(2, 1));
+         console.log(Module._show_me_the_answer_c(10));
+         console.log(Module._add_c(2, 3, 4));
+         console.log(Module._add_c(12));
       }
    </script>
+   <script src="web_api.js"></script>
 </body>
 
 </html>
