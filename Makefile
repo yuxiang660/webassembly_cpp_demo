@@ -1,19 +1,26 @@
-TARGET = web_api
+.PHONY: clean release debug build rebuild serve dump
 
-all: TARGET
+all: rebuild
 
-TARGET: clean
-	@rm -rf build && mkdir build
-	em++ -std=c++20 web_api.cpp -lutil -Llib -Iinclude --no-entry -o $(TARGET).js
-	@cp $(TARGET).wasm ./build
-	@cp $(TARGET).js ./build
-	@cp index.html ./build
+rebuild: clean build
+
+build:
+	emcmake cmake -S . -B build
+	cmake --build ./build --verbose
 
 serve:
-	python -m SimpleHTTPServer
+	cd ./build/html && python -m SimpleHTTPServer
 
 dump:
-	wasm2wat $(TARGET).wasm -o $(TARGET).wat
+	wasm2wat ./build/html/web_api.wasm -o web_api.wat
 
 clean:
-	@rm -rf *.wasm *.wat build web_api.js
+	@rm -rf *.wat build
+
+release: clean
+	emcmake cmake -S . -B build -DCMAKE_BUILD_TYPE=RELEASE
+	cmake --build ./build --clean-first --verbose
+
+debug: clean
+	emcmake cmake -S . -B build -DCMAKE_BUILD_TYPE=DEBUG
+	cmake --build ./build --clean-first --verbose

@@ -16,12 +16,21 @@
 #endif
 
 #include "util.h"
+#include "demo.h"
 
-EM_PORT_API(int) show_me_the_answer_c() {
+EM_PORT_API(int) ShowMeTheAnswer() {
    return DEMO::show_me_the_answer();
 }
 
-EM_PORT_API(float) add_c(float a, float b) {
+EM_PORT_API(float) Add(float a, float b) {
    return DEMO::add(a, b);
+}
+
+EM_PORT_API(int) Sub(int a, int b) {
+   return DEMO::sub(a, b);
+}
+
+EM_PORT_API(int) Multiply(int a, int b) {
+   return DEMO::multiply(a, b);
 }
 

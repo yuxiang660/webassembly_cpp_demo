@@ -13,15 +13,18 @@
    <script>
       Module = {};
       Module.onRuntimeInitialized = function () {
-         console.log(Module._show_me_the_answer_c());
-         console.log(Module._add_c(2, 1));
-         console.log(Module._show_me_the_answer_c(10));
-         console.log(Module._add_c(2, 3, 4));
-         console.log(Module._add_c(12));
+         console.log(Module._ShowMeTheAnswer());
+         console.log(Module._Add(2, 1));
+         console.log(Module._ShowMeTheAnswer(10));
+         console.log(Module._Add(2, 3, 4));
+         console.log(Module._Add(12));
       }
       var a = 1;
       async function myFunction() {
-         console.log(Module._add_c(0, a++));
+         console.log(Module._Add(0, a));
+         console.log(Module._Sub(0, a));
+         console.log(Module._Multiply(1, a));
+         a++;
       }
    </script>
    <script src="web_api.js"></script>
