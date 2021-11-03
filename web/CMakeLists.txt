@@ -28,9 +28,7 @@ set_target_properties(${TARGET} PROPERTIES
 # Copy js and html files to output folder
 add_custom_command(
   TARGET ${TARGET} POST_BUILD
-  COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_LIST_DIR}/index.html ${WEB_OUTUPT_DIR}
-  COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR}/html ${WEB_OUTUPT_DIR}/html
-  COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR}/js ${WEB_OUTUPT_DIR}/js
+  COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_LIST_DIR} ${WEB_OUTUPT_DIR}
 )
 
 
