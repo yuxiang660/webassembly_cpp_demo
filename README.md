@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/yuxiang660/webassembly_cpp_demo/actions"><img
-    src="https://github.com/yuxiang660/webassembly_cpp_demo/workflows/build/badge.svg?branch=main"
+    src="https://github.com/yuxiang660/webassembly_cpp_demo/workflows/build/badge.svg"
     alt="Build"
   /></a>
 </p>
