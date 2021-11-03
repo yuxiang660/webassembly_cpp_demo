@@ -1,2 +1,5 @@
 *.wat
 *.wasm
+
+# cpp
+*.o

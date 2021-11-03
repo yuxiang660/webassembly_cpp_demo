@@ -15,7 +15,7 @@
 #   endif
 #endif
 
-#include "./api.h"
+#include "util.h"
 
 EM_PORT_API(int) show_me_the_answer_c() {
    return DEMO::show_me_the_answer();

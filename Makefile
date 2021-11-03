@@ -1,10 +1,9 @@
 TARGET = web_api
-SRC = api.cpp web_api.cpp
 
 all: TARGET
 
 TARGET: clean
-	em++ -std=c++20 $(SRC) --no-entry -o $(TARGET).wasm
+	em++ -std=c++20 web_api.cpp -lutil -Llib -Iinclude --no-entry -o $(TARGET).wasm
 
 serve:
 	python -m SimpleHTTPServer
