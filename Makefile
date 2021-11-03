@@ -3,7 +3,10 @@ TARGET = web_api
 all: TARGET
 
 TARGET: clean
+	@rm -rf build && mkdir build
 	em++ -std=c++20 web_api.cpp -lutil -Llib -Iinclude --no-entry -o $(TARGET).wasm
+	@cp $(TARGET).wasm ./build
+	@cp index.html ./build
 
 serve:
 	python -m SimpleHTTPServer

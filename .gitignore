@@ -1,4 +1,6 @@
 *.wat
+*.wasm
+build/
 
 # cpp
 *.o
