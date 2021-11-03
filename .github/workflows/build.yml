@@ -6,10 +6,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup emsdk
+        uses: mymindstorm/setup-emsdk@v9
+      - name: Verify
+        run: emcc -v
       - name: checkout
         uses: actions/checkout@v1
-      - name: Setup Emscripten
-        uses: lovasoa/setup-emscripten@v1
       - name: install
         run: sudo apt-get update
       - name: build
