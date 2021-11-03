@@ -16,4 +16,4 @@ dump:
 	wasm2wat $(TARGET).wasm -o $(TARGET).wat
 
 clean:
-	@rm -rf *.wasm *.wat build
+	@rm -rf *.wasm *.wat build web_api.js
