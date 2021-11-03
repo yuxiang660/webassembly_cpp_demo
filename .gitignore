@@ -1,5 +1,6 @@
 *.wat
 *.wasm
+web_api.js
 build/
 
 # cpp
