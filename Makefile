@@ -4,7 +4,7 @@ SRC = api.cpp web_api.cpp
 all: TARGET
 
 TARGET: clean
-	em++ -std=c++20 $(SRC) --no-entry -o $(TARGET).js
+	em++ -std=c++20 $(SRC) --no-entry -o $(TARGET).wasm
 
 serve:
 	python -m SimpleHTTPServer
@@ -13,4 +13,4 @@ dump:
 	wasm2wat $(TARGET).wasm -o $(TARGET).wat
 
 clean:
-	@rm -rf *.wasm *.js *.wat
+	@rm -rf *.wasm *.wat
