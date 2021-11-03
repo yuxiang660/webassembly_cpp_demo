@@ -34,3 +34,6 @@ EM_PORT_API(int) Multiply(int a, int b) {
    return DEMO::multiply(a, b);
 }
 
+EM_PORT_API(const char*) GetString() {
+   return DEMO::get_string();
+}

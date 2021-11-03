@@ -1799,6 +1799,9 @@ var _Sub = Module["_Sub"] = createExportWrapper("Sub");
 var _Multiply = Module["_Multiply"] = createExportWrapper("Multiply");
 
 /** @type {function(...*):?} */
+var _GetString = Module["_GetString"] = createExportWrapper("GetString");
+
+/** @type {function(...*):?} */
 var ___errno_location = Module["___errno_location"] = createExportWrapper("__errno_location");
 
 /** @type {function(...*):?} */
