@@ -4,30 +4,16 @@
 
 <head>
    <meta charset="utf-8">
-   <title>Emscripten:Export1</title>
+   <title>Demo</title>
 </head>
 
 <body>
-   <p>Title</p>
-   <button onclick="myFunction()">Run myFunction</button>
-   <script>
-      Module = {};
-      Module.onRuntimeInitialized = function () {
-         console.log(Module._ShowMeTheAnswer());
-         console.log(Module._Add(2, 1));
-         console.log(Module._ShowMeTheAnswer(10));
-         console.log(Module._Add(2, 3, 4));
-         console.log(Module._Add(12));
-      }
-      var a = 1;
-      async function myFunction() {
-         console.log(Module._Add(0, a));
-         console.log(Module._Sub(0, a));
-         console.log(Module._Multiply(1, a));
-         a++;
-      }
-   </script>
+   <script src="./js/setup.js"></script>
    <script src="web_api.js"></script>
+   <p>WebAssembly Demo</p>
+   <button onclick="button()">Click Me</button>
+   <script src="./js/button.js"></script>
+   <p>Footnote</p>
 </body>
 
 </html>
