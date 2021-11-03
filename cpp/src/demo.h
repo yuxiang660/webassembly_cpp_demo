@@ -19,4 +19,11 @@ int sub(int a, int b);
  */
 int multiply(int a, int b);
 
+/**
+ * @brief Get the string pointer
+ * 
+ * @return const char* 
+ */
+const char* get_string();
+
 }
