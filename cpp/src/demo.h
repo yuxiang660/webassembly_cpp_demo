@@ -26,4 +26,12 @@ int multiply(int a, int b);
  */
 const char* get_string();
 
+/**
+ * @brief Set the string object
+ * 
+ * @param s 
+ * @return int 
+ */
+int set_string(const char* s);
+
 }
