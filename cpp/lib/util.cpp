@@ -1,13 +1,13 @@
 #include "./util.h"
 
-#include <stdio.h>
+#include <iostream>
 
 namespace LIBDEMO
 {
 
 int hello()
 {
-   printf("hello from lib\n");
+   std::cout << "hello from lib" << std::endl;
    return 1;
 }
 
