@@ -10,4 +10,7 @@ async function button() {
    console.log(str);
    ptr = allocateUTF8OnStack("你好，Emscripten！");
    Module._SetString(ptr);
+   ptr2 = allocateUTF8("你好2，Emscripten！");
+   Module._SetString(ptr2);
+   _free(ptr2);
 }
