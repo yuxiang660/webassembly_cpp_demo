@@ -3,11 +3,9 @@
 #include <cstdint>
 #include <cfloat>
 
-namespace DEMO
+namespace LIBDEMO
 {
 
-int show_me_the_answer();
-
-float add(float a, float b);
+int hello();
 
 }
