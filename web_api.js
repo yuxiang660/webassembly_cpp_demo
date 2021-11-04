@@ -4723,6 +4723,9 @@ var _Multiply = Module["_Multiply"] = createExportWrapper("Multiply");
 var _GetString = Module["_GetString"] = createExportWrapper("GetString");
 
 /** @type {function(...*):?} */
+var _SetString = Module["_SetString"] = createExportWrapper("SetString");
+
+/** @type {function(...*):?} */
 var ___errno_location = Module["___errno_location"] = createExportWrapper("__errno_location");
 
 /** @type {function(...*):?} */
