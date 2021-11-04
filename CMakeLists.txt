@@ -20,6 +20,8 @@ target_include_directories(${TARGET} PRIVATE (${CMAKE_SOURCE_DIR}/cpp/lib))
 # add "--no-entry" because web_api.cpp doesn't have main function
 target_compile_options(${TARGET} PRIVATE -g)
 target_link_options(${TARGET} PRIVATE --no-entry -g)
+# CMAKE_CXX_FLAGS will affect both compile and link commands
+# set(CMAKE_CXX_FLAGS "-O0")
 
 set(WEB_OUTUPT_DIR ${CMAKE_BINARY_DIR}/html)
 file(MAKE_DIRECTORY ${WEB_OUTUPT_DIR})
