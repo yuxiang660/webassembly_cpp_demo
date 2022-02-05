@@ -5,3 +5,5 @@ build/
 
 # cpp
 *.o
+.vscode
+
